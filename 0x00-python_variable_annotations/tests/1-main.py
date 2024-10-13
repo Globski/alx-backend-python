@@ -1,4 +1,3 @@
-bob@dylan:~$ cat 1-main.py
 #!/usr/bin/env python3
 concat = __import__('1-concat').concat
 
