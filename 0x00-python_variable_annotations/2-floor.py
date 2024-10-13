@@ -3,8 +3,8 @@
 Module for mathematical operations.
 """
 
-
 import math
+
 
 def floor(n: float) -> int:
     """
