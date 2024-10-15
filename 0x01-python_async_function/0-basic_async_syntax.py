@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Module for asynchronous operations, including a function to wait for a random delay.
+Module for asynchronous operations, including
+a function to wait for a random delay.
 """
 
 import asyncio
