@@ -2,8 +2,7 @@
 
 ## Description
 
-This project focuses on creating asynchronous generators and comprehensions using Python's `asyncio` module. The goal is to develop a series of coroutines that yield random numbers asynchronously, collect those numbers, and measure runtime. 
-It demonstrates the use of asynchronous programming in Python, enabling efficient handling of tasks that involve waiting—such as fetching random numbers—while maintaining responsive and concurrent execution.
+This project focuses on creating asynchronous generators and comprehensions using Python's asyncio module. The goal is to develop a set of coroutines that asynchronously generate random numbers, collect those numbers, and measure runtime. It demonstrates the use of asynchronous programming in Python to efficiently handle tasks that involve waiting - such as fetching random numbers - while maintaining responsive and concurrent execution.
 
 ## Project Structure
 
