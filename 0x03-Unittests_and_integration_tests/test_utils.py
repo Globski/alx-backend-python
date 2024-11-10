@@ -82,7 +82,6 @@ class TestMemoize(unittest.TestCase):
             This method returns 42, which will be memoized.
             """
             return 42
-
         @memoize
         def a_property(self):
             """
@@ -94,7 +93,7 @@ class TestMemoize(unittest.TestCase):
     def test_memoize(self):
         """
         Test that the memoize decorator works as expected.
-        Ensure a_method is called only once, evenwhen a_property
+        Ensure a_method is called only once, even when a_property
         is accessed multiple times.
         """
         test_instance = self.TestClass()
