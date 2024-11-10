@@ -4,6 +4,7 @@ from unittest.mock import patch, MagicMock
 from parameterized import parameterized
 from client import GithubOrgClient
 
+
 class TestGithubOrgClient(unittest.TestCase):
     """
     Test cases for the GithubOrgClient class from client.py
@@ -26,7 +27,8 @@ class TestGithubOrgClient(unittest.TestCase):
 
         result = client.org()
 
-        mock_get_json.assert_called_once_with(client.ORG_URL.format(org=org_name))
+        mock_get_json.assert_called_once_with(
+            client.ORG_URL.format(org=org_name))
 
         self.assertEqual(result, expected_result)
 
