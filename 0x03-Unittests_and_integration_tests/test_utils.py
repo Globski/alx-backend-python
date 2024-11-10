@@ -81,32 +81,49 @@ class TestGetJson(unittest.TestCase):
 class TestMemoize(unittest.TestCase):
     """
     Test cases for the memoize decorator from utils.py.
+
+    This class tests the functionality of the memoize decorator to ensure
+    that it properly caches the results of a method when accessed multiple times.
     """
 
     class TestClass:
         """
-        This class contains a method and a memoized property.
-        """
+        A test class to demonstrate the use of the memoize decorator.
 
+        This class contains:
+        - `a_method`: A method that returns the integer 42.
+        - `a_property`: A property that is memoized and calls `a_method` to get its value.
+        """
+        
         def a_method(self):
             """
-            This method returns 42, which will be memoized.
+            A simple method that returns the integer 42.
+            
+            This method's result will be cached when called via the memoized `a_property`.
             """
             return 42
 
         @memoize
         def a_property(self):
             """
-            This is a property that is memoized.
-            It calls `a_method` and caches the result.
+            A memoized property that calls `a_method` to get its value.
+            
+            The result of this property is cached, so subsequent accesses will return
+            the cached result instead of recalculating the value by calling `a_method`.
             """
             return self.a_method()
 
     def test_memoize(self):
         """
         Test that the memoize decorator works as expected.
-        Ensure a_method is called only once, even when a_property
-        is accessed multiple times.
+
+        This test ensures that when the `a_property` is accessed multiple times,
+        the underlying `a_method` is only called once, demonstrating that the
+        memoize decorator caches the result.
+
+        It also checks that:
+        - The method `a_method` is only called once.
+        - The result of the `a_property` is correctly memoized and reused.
         """
         test_instance = self.TestClass()
 
