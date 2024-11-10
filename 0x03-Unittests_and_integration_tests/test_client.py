@@ -7,7 +7,7 @@ from client import GithubOrgClient
 
 class TestGithubOrgClient(unittest.TestCase):
     """
-    Test cases for the GithubOrgClient class from client.py
+    Test cases for the GithubOrgClient class from client.py.
     """
 
     @parameterized.expand([
