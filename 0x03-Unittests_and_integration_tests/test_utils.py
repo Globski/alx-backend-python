@@ -71,7 +71,6 @@ class TestMemoize(unittest.TestCase):
     Test cases for the memoize decorator from utils.py.
     """
 
-    @patch.object
     class TestClass:
         """
         This class contains a method and a memoized property.
