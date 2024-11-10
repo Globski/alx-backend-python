@@ -82,8 +82,8 @@ class TestMemoize(unittest.TestCase):
             This method returns 42, which will be memoized.
             """
             return 42
+        
         @memoize
-
         def a_property(self):
             """
             This is a property that is memoized.
