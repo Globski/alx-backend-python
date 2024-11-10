@@ -121,9 +121,9 @@ class TestMemoize(unittest.TestCase):
         """
         Test that the memoize decorator works as expected.
 
-        This test ensures that when the `a_property` is accessed multiple times,
-        the underlying `a_method` is only called once, demonstrating that the
-        memoize decorator caches the result.
+        This test ensures that when the `a_property` is accessed multiple
+        times, the underlying `a_method` is only called once, demonstrating
+        that the memoize decorator caches the result.
 
         It also checks that:
         - The method `a_method` is only called once.
