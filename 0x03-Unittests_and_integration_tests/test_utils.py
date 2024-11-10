@@ -5,6 +5,7 @@ from collections.abc import Mapping
 from typing import Any, Sequence
 from utils import access_nested_map
 
+
 class TestAccessNestedMap(unittest.TestCase):
     """
     Test cases for the access_nested_map function from utils.py
@@ -21,7 +22,6 @@ class TestAccessNestedMap(unittest.TestCase):
         and returns the expected values for the given path.
         """
         self.assertEqual(access_nested_map(nested_map, path), expected)
-
 
     def test_access_nested_map_exception(self, nested_map, path):
         """
