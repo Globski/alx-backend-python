@@ -51,12 +51,13 @@ class TestGetJson(unittest.TestCase):
     @patch('requests.get')
     def test_get_json(self, test_url, test_payload, mock_get):
         """
-        Test that get_json correctly calls requests.get and returns the expected payload.
+        Test that get_json correctly calls requests.get
+        and returns the expected payload.
         """
 
         mock_response = Mock()
         mock_response.json.return_value = test_payload
-        
+
         mock_get.return_value = mock_response
 
         result = get_json(test_url)
@@ -93,11 +94,14 @@ class TestMemoize(unittest.TestCase):
     def test_memoize(self):
         """
         Test that the memoize decorator works as expected.
-        Ensure a_method is called only once, even when a_property is accessed multiple times.
+        Ensure a_method is called only once, evenwhen a_property
+        is accessed multiple times.
         """
         test_instance = self.TestClass()
 
-        with patch.object(test_instance, 'a_method', wraps=test_instance.a_method) as mock_a_method:
+        with patch.object(
+            test_instance, 'a_method', wraps=test_instance.a_method
+        ) as mock_a_method:
             result_1 = test_instance.a_property
             result_2 = test_instance.a_property
 
