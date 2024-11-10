@@ -75,6 +75,19 @@ def test_public_repos(self, mock_public_repos_url, mock_get_json):
     mock_get_json.assert_called_once_with(mock_public_repos_url.return_value)
     mock_public_repos_url.assert_called_once()
 
+    @parameterized.expand([
+        ({"license": {"key": "my_license"}}, "my_license", True),
+        ({"license": {"key": "other_license"}}, "my_license", False),
+    ])
+    def test_has_license(self, repo, license_key, expected):
+        """
+        Test that the has_license method correctly identifies whether a repo has a given license.
+        
+        This test is parameterized with different `repo` and `license_key` values to verify
+        the correct behavior of the has_license method.
+        """
+        result = GithubOrgClient.has_license(repo, license_key)
+        self.assertEqual(result, expected)
 
 
 if __name__ == "__main__":
