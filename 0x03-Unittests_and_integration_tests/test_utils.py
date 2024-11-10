@@ -83,7 +83,8 @@ class TestMemoize(unittest.TestCase):
     Test cases for the memoize decorator from utils.py.
 
     This class tests the functionality of the memoize decorator to ensure
-    that it properly caches the results of a method when accessed multiple times.
+    that it properly caches the results of a method when accessed
+    multiple times.
     """
 
     class TestClass:
@@ -92,14 +93,16 @@ class TestMemoize(unittest.TestCase):
 
         This class contains:
         - `a_method`: A method that returns the integer 42.
-        - `a_property`: A property that is memoized and calls `a_method` to get its value.
+        - `a_property`: A property that is memoized and calls
+        `a_method` to get its value.
         """
-        
+
         def a_method(self):
             """
             A simple method that returns the integer 42.
-            
-            This method's result will be cached when called via the memoized `a_property`.
+
+            This method's result will be cached when called
+            via the memoized `a_property`.
             """
             return 42
 
@@ -107,9 +110,10 @@ class TestMemoize(unittest.TestCase):
         def a_property(self):
             """
             A memoized property that calls `a_method` to get its value.
-            
-            The result of this property is cached, so subsequent accesses will return
-            the cached result instead of recalculating the value by calling `a_method`.
+
+            The result of this property is cached, so subsequent accesses
+            will return the cached result instead of recalculating
+            the value by calling `a_method`.
             """
             return self.a_method()
 
